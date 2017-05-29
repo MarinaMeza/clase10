@@ -6,3 +6,16 @@ composer se baja de la pagna getcomposer.org
 slim framework con-> composer require slim/slim "^3.0" 
 
 lo que devuelve php es un api rest
+
+en el index.php pegamos lo que esta en el home de la pagina de slimframework. si nos sale page not found esta funcionando
+
+en postman pegamos la ubicacion del index.php
+
+hace falta crear un .htaccess que contenga:
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.php [L]
+
+tiene que estar al mismo nivel que el index.php para que funcione
+
