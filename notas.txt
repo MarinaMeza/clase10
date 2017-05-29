@@ -1,0 +1,8 @@
+composer (como el bowser)
+api rest (slim framework) permite comunicarse. dependiendo del verbo de ajax (post, get, delete) ejecuta los metodos.
+permite comunicarse con la base de datos y crear el no se token para el login y poder usar sesiones que hasta ahora no hubieramos podido
+
+composer se baja de la pagna getcomposer.org
+slim framework con-> composer require slim/slim "^3.0" 
+
+lo que devuelve php es un api rest
