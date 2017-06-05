@@ -2,7 +2,8 @@ composer (como el bowser)
 api rest (slim framework) permite comunicarse. dependiendo del verbo de ajax (post, get, delete) ejecuta los metodos.
 permite comunicarse con la base de datos y crear el no se token para el login y poder usar sesiones que hasta ahora no hubieramos podido
 
-composer se baja de la pagna getcomposer.org
+composer se baja de la pagina getcomposer.org
+aca a veces tengo que reiniciar el vscode
 slim framework con-> composer require slim/slim "^3.0" 
 
 lo que devuelve php es un api rest
@@ -19,3 +20,13 @@ RewriteRule . index.php [L]
 
 tiene que estar al mismo nivel que el index.php para que funcione
 
+hoy:
+lograr cors ()
+evitar index.php
+file/archivos
+
+[subir cuanto antes el apirest a la pagina]--->ellos van a probar subir un auto y por fuera del sistema con un postman ver que esten todos incluido el ultimo que se acaba de subir
+
+en el .htaccess tengoque agregar las lineas para que se puedan manipular las rutas
+
+el segundo parcial es un slim con alta modificacion baja y qu eno de error

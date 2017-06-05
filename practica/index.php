@@ -14,11 +14,25 @@ $app->get('/hello/{name}', function (Request $request, Response $response) {
 
     return $response;
 });//cada uno de estos se hace por cada metodo que vamos a publicar y genera la interfaz para que se pueda comunicar con alguien mas
+
+$app->options('/{routes:.+}', function ($request, $response, $args) {//cors
+    return $response;
+});
+
+$app->add(function ($req, $res, $next) {//cors
+    $response = $next($req, $res);
+    return $response
+            ->withHeader('Access-Control-Allow-Origin', 'http://mysite')
+            ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
+            ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+});
+
 $app->get('/', function (Request $request, Response $response) {//este segundo get se muestra al cargar la pagina en lugar del page not found
     $response->getBody()->write("Hola mundo slim framework get");
 
     return $response;
 });
+
 $app->post('/', function (Request $request, Response $response) {
     $response->getBody()->write("Hola mundo slim framework post");
 
